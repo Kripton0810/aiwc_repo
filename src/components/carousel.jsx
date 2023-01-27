@@ -8,7 +8,7 @@ import Cas5 from "../images/cas5.jpeg"
 
 function Carosuel() {
   return (
-    <div className=" w-2/3 h-56 sm:h-64 xl:h-80 2xl:h-96">
+    <div className=" w-[95%] h-96 sm:h-96 2xl:h-96">
       <Carousel slideInterval={5000}>
         <img src={Cas1} alt="..." className="object-fit h-full w-full" />
         <img src={Cas2} alt="..." className="object-fit h-full w-full" />

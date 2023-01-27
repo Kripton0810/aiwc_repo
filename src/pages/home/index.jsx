@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <NavBar />
-      <div className="flex">
+      <div className="flex justify-evenly flex-col items-center gap-2 xl:flex-row xl:items-start">
         <Carosuel />
         <NoticeBoard />
       </div>
