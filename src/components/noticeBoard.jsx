@@ -7,7 +7,7 @@ function ReadMore(data) {
   const [click, onClick] = useState(false)
   return (
     <React.Fragment>
-      <Button onClick={() => onClick(true)}>Toggle modal</Button>
+      <Button onClick={() => onClick(true)}>Read More </Button>
       <Modal
         dismissible="true"
         show={click}
@@ -50,11 +50,16 @@ function NewsList() {
 }
 
 function NoticeBoard() {
+  let hold = false
+  const handelMouseOver = () => {
+    console.log("Hello in")
+    hold = true
+  }
+  const handelMouseLeave = () => {
+    console.log("Hello Leave")
+    hold = false
+  }
   useEffect(() => {
-    let hold = false
-    const handelMouseOver = () => {
-      hold = !hold
-    }
     const box = document.getElementById("noticeBox")
     const element = document.getElementById("newstape")
     let top = 0
@@ -62,8 +67,6 @@ function NoticeBoard() {
       if (top < -(box.clientHeight * 2) - 100) {
         top = box.clientHeight
       }
-      box.addEventListener("mouseleave", handelMouseOver)
-      box.addEventListener("mouseover", handelMouseOver)
 
       element.style.top = `${top}px`
       if (!hold) {
@@ -72,13 +75,15 @@ function NoticeBoard() {
       return () => {
         box.removeEventListener("mouseover")
       }
-    }, 10)
-  }, [])
+    }, 15)
+  }, [hold])
   return (
     <>
       <div
         className="w-[95%] box m-5 overflow-y-hidden border-4 border-black h-[500px] xl:m-0 "
         id="noticeBox"
+        onMouseOverCapture={handelMouseOver}
+        onMouseLeave={handelMouseLeave}
       >
         <div id="newstape" className="relative">
           <NewsList />
