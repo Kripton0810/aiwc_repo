@@ -29,7 +29,7 @@ function ReadMore(data) {
 }
 function NewsItem(data) {
   return (
-    <Card href="#">
+    <Card href="#" className="my-5">
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         {data.value.heading}
       </h5>
@@ -80,12 +80,12 @@ function NoticeBoard() {
   return (
     <>
       <div
-        className="w-[95%] box m-5 overflow-y-hidden border-4 border-black h-[500px] xl:m-0 "
+        className="w-[95%] h-[300px] text-sm rounded-xl box mx-5 overflow-y-hidden border-2 border-black  xl:mx-2 xl:p-2  xl:w-1/2 xl:h-[700px] xl:text-lg"
         id="noticeBox"
         onMouseOverCapture={handelMouseOver}
         onMouseLeave={handelMouseLeave}
       >
-        <div id="newstape" className="relative">
+        <div id="newstape" className="relative top-10 flex-col ">
           <NewsList />
         </div>
       </div>
