@@ -1,8 +1,7 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import news from "../data/newstopic.js"
 import { Card, Button } from "flowbite-react"
 import { Modal } from "flowbite-react"
-import Marquee from "react-fast-marquee"
 
 function ReadMore(data) {
   const [click, onClick] = useState(false)
@@ -51,12 +50,39 @@ function NewsList() {
 }
 
 function NoticeBoard() {
+  useEffect(() => {
+    let hold = false
+    const handelMouseOver = () => {
+      hold = !hold
+    }
+    const box = document.getElementById("noticeBox")
+    const element = document.getElementById("newstape")
+    let top = 0
+    setInterval(() => {
+      if (top < -(box.clientHeight * 2) - 100) {
+        top = box.clientHeight
+      }
+      box.addEventListener("mouseleave", handelMouseOver)
+      box.addEventListener("mouseover", handelMouseOver)
+
+      element.style.top = `${top}px`
+      if (!hold) {
+        top--
+      }
+      return () => {
+        box.removeEventListener("mouseover")
+      }
+    }, 10)
+  }, [])
   return (
     <>
-      <div className="w-[95%] m-5 overflow-y-auto border-black border-4 h-[500px] xl:m-0 ">
-        <Marquee pauseOnHover={true} gradient={false} speed={100}>
+      <div
+        className="w-[95%] box m-5 overflow-y-hidden border-4 border-black h-[500px] xl:m-0 "
+        id="noticeBox"
+      >
+        <div id="newstape" className="relative">
           <NewsList />
-        </Marquee>
+        </div>
       </div>
     </>
   )
