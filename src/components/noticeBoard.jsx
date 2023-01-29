@@ -90,7 +90,7 @@ function NoticeBoard() {
   return (
     <>
       <div
-        className="w-[95%] h-[300px] text-sm rounded-xl box mx-5 overflow-y-hidden border-2 border-black  xl:mx-2 xl:p-2  xl:w-1/2 xl:h-[700px] xl:text-lg"
+        className="w-[95%] h-[300px] text-sm rounded-xl box mx-5 overflow-y-hidden border-2 border-black  xl:mx-2 xl:p-2  xl:w-1/2 xl:h-[500px] xl:text-lg"
         id="noticeBox"
         onMouseOverCapture={handelMouseOver}
         onMouseLeave={handelMouseLeave}

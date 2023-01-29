@@ -2,6 +2,7 @@ import React from "react"
 import NavBar from "../../components/navbar"
 import Carosuel from "../../components/carousel"
 import NoticeBoard from "../../components/noticeBoard"
+import FooterDiv from "../../components/footer"
 
 function Home() {
   return (
@@ -11,6 +12,8 @@ function Home() {
         <Carosuel />
         <NoticeBoard />
       </div>
+      {/* <div className="space-y-20"></div> */}
+      <FooterDiv />
     </>
   )
 }
