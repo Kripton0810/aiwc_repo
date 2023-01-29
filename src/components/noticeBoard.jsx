@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import news from "../data/newstopic.js"
 import { Card, Button } from "flowbite-react"
 import { Modal } from "flowbite-react"
+import NewBlick from "../images/newblink.gif"
 
 function ReadMore(data) {
   const [click, onClick] = useState(false)
@@ -28,11 +29,20 @@ function ReadMore(data) {
   )
 }
 function NewsItem(data) {
+  let blinker
+  if (data.value.isNew) {
+    blinker = <img src={NewBlick} alt="Latest news" width="50px" />
+  } else {
+    blinker = ""
+  }
   return (
     <Card href="#" className="my-5">
-      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-        {data.value.heading}
-      </h5>
+      <div className="flex flex-row justify-between items-center">
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {data.value.heading}
+        </h5>
+        {blinker}
+      </div>
       <p className="font-normal text-gray-700 dark:text-gray-400">
         {data.value.desc.length > 150
           ? data.value.desc.substring(0, 149) + "..."

@@ -6,6 +6,7 @@ const news = [
       "https://static.vecteezy.com/packs/media/vectors/term-bg-1-3d6355ab.jpg",
     status: true,
     releaseDate: "2022-10-20",
+    isNew: true,
   },
   {
     heading: "Topic 2",
@@ -13,6 +14,7 @@ const news = [
     imageurl: "https://www.w3schools.com/css/img_forest.jpg",
     status: true,
     releaseDate: "2022-10-20",
+    isNew: true,
   },
   {
     heading: "Topic 3",
@@ -21,6 +23,7 @@ const news = [
       "https://www.shutterstock.com/image-photo/surreal-image-african-elephant-wearing-260nw-1365289022.jpg",
     status: true,
     releaseDate: "2022-10-20",
+    isNew: false,
   },
   {
     heading: "Topic 4",
@@ -29,6 +32,7 @@ const news = [
       "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=",
     status: true,
     releaseDate: "2022-10-20",
+    isNew: false,
   },
   {
     heading: "Topic 5",
@@ -37,6 +41,7 @@ const news = [
       "https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg",
     status: true,
     releaseDate: "2022-10-20",
+    isNew: true,
   },
 ]
 
