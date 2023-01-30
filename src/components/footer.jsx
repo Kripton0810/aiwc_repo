@@ -10,7 +10,7 @@ import {
 
 export default function FooterDiv() {
   return (
-    <Footer className="bottom-0 mt-10 xl:absolute rounded-none" bgDark="true">
+    <Footer className="bottom-0 mt-10 xl:relative rounded-none" bgDark="true">
       <div className="w-full">
         <div className="grid w-full grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
           <div>
