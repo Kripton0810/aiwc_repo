@@ -10,7 +10,6 @@ import MissionVision from "../../components/missionvision"
 function Home() {
   return (
     <>
-      <NavBar />
       <div className="flex justify-evenly flex-col items-center gap-2 xl:flex-row xl:items-start">
         <Carosuel />
         <NoticeBoard />
