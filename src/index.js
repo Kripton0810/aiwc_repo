@@ -3,15 +3,40 @@ import ReactDOM from "react-dom/client"
 import "./index.css"
 import reportWebVitals from "./reportWebVitals"
 import App from "./App"
-import {Routes,Route} from "react-router-dom"
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import LoginPage from "./pages/auth/login"
+import RegisterPage from "./pages/auth/register"
+import Home from "./pages/home"
+import SchoolSingularity from "./pages/school_singularity"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
+const route = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/school-features",
+        element: <SchoolSingularity />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/register",
+    element: <RegisterPage />,
+  },
+])
 root.render(
   <React.StrictMode>
-    <Routes>
-      <Route path="/" element={<App/>}/>
-    </Routes>
+    <RouterProvider router={route} />
   </React.StrictMode>
 )
 
