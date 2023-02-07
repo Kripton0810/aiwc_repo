@@ -1,16 +1,29 @@
 import React from "react"
 import ReactDOM from "react-dom/client"
 import "./index.css"
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import reportWebVitals from "./reportWebVitals"
+import App from "./App"
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import LoginPage from "./pages/auth/login"
 import RegisterPage from "./pages/auth/register"
 import Home from "./pages/home"
+import SchoolSingularity from "./pages/school_singularity"
 
+const root = ReactDOM.createRoot(document.getElementById("root"))
 const route = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/school-features",
+        element: <SchoolSingularity />,
+      },
+    ],
   },
   {
     path: "/login",
@@ -21,7 +34,6 @@ const route = createBrowserRouter([
     element: <RegisterPage />,
   },
 ])
-const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
     <RouterProvider router={route} />
