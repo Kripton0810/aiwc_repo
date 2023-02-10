@@ -40,6 +40,13 @@
   p {
     color: #141823;
   }
+
+  @media only screen and (max-width: 768px) {
+    
+  .swiper-slide {
+    width: 18rem;
+  }
+}
   
   /* Quote */
   
