@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 .main-swiper-wrapper {
     font-family: "Patrick Hand", cursive;
     background: url('http://aiwcaoe.edu.in/images/index/Front%20side%20-AIWCAOE%20-%20GEO%20Tag.jpg');
@@ -34,7 +37,7 @@
     color: #292f33;
   }
   
-  P {
+  p {
     color: #141823;
   }
   
