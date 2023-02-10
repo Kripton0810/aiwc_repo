@@ -1,5 +1,6 @@
 {
   "name": "student-react",
+  "homepage": "https://aiwctest.codinghood.in",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
