@@ -34,11 +34,7 @@ const route = createBrowserRouter([
     element: <RegisterPage />,
   },
 ])
-root.render(
-  <React.StrictMode>
-    <RouterProvider router={route} />
-  </React.StrictMode>
-)
+root.render(<RouterProvider router={route} />)
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

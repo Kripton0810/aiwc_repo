@@ -1,0 +1,95 @@
+.main-swiper-wrapper {
+    font-family: "Patrick Hand", cursive;
+    background: url('http://aiwcaoe.edu.in/images/index/Front%20side%20-AIWCAOE%20-%20GEO%20Tag.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-top: 3rem;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .swiper-slide {
+    display: grid;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background: rgb(240, 240, 240);
+    width: 50rem;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100rem;
+    justify-self: center;
+    border-radius: 10%;
+    margin-top: 0.6rem;
+  }
+  
+  h5 {
+    font-family: "GFS Didot", serif;
+    font-weight: bold;
+    color: #292f33;
+  }
+  
+  P {
+    color: #141823;
+  }
+  
+  /* Quote */
+  
+  .quote-parent {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quote {
+    height: 150px;
+    width: 150px;
+    background-color: #256;
+    border-radius: 50px;
+    transition: all 0.5s;
+  }
+  
+  .quote:hover {
+    transform: scale(1.5);
+    background-color: #ebecf0;
+    background: #ebecf0;
+    box-shadow: 5px 5px 0px #cacbce, -5px -5px 0px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .quote:hover > h1 {
+    display: none;
+  }
+  
+  .quote:hover > .quote-content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quote h1 {
+    font-family: "Rubik", sans-serif;
+    color: #f1faee;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .quote-content {
+    display: none;
+  }
