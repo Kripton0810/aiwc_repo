@@ -40,3 +40,5 @@ jobs:
           server: ftp.codinghood.in	
           username: u589244378.aiwctest
           password: Sub@2019
+          local-dir: build/
+          server-dir: ./
