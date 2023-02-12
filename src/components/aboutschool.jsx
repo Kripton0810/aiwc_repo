@@ -5,7 +5,7 @@ export default function AboutSchool() {
   return (
     <div className="max-w-lg">
       <Card
-        horizontal={true}
+        horizontal="true"
         imgSrc={process.env.REACT_APP_BASE_IMAGE_URL + "mainbuilding.jpg"}
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
