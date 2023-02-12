@@ -33,10 +33,7 @@ jobs:
         uses: actions/download-artifact@main
         with:
           name: build
-          path: build/      
-      - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.3
-        with:
-          server: ftp.codinghood.in	
-          username: u589244378.aiwctest
-          password: Sub@2019
+          path: build/  
+      - name: run ls
+        run: ls    
+      
