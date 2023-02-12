@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - 'main'
+  merge:
+    branches:
+      - 'main'
 
 jobs:
   build:
@@ -37,6 +40,6 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_PASSWORD }}
-          password: ${{ secrets.FTP_USERNAME }}
+          server: ftp.codinghood.in	
+          username: u589244378.aiwctest
+          password: Sub@2019
