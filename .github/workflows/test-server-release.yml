@@ -44,12 +44,15 @@ jobs:
           server: ftp.codinghood.in	
           username: u589244378.aiwctest
           password: Sub@2019
+          local-dir: ./build/
           exclude: |
             **/.git*
             **/.git*/**
             **/public/**
-            **/.package*
+            **/package*
             **/README.md
             **/tailwind.config.js
             **/netlify.toml
             **/src/**
+            **/.prettierrc
+            **/.htaccess
