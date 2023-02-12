@@ -7,12 +7,31 @@ on:
 
 jobs:
   build:
+    name: Build 🛠️
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Install Dependencies
+        run: npm install
+      - name: Making Build of Project
+        run: npm run build
+      - name: Archive staging artifact
+        uses: actions/upload-artifact@main
         with:
-          node-version: 16
-      - run: npm install
-      - run: npm run build
-      - run: ls
+          name: dist
+          path: dist
+      
+  deploy:
+    name: Deploy 🛫
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          name: dist
+          path: dist
+          
