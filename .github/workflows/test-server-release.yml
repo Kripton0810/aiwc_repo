@@ -26,3 +26,38 @@ jobs:
         with:
           name: build
           path: build/
+      
+  deploy:
+    name: Deploy 🛫
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          name: build
+          path: build/  
+      - name: run cd build
+        run: cd build
+      - name: check build list
+        run: ls   
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/public/**
+            **/package*
+            **/README.md
+            **/tailwind.config.js
+            **/netlify.toml
+            **/src/**
+            **/.prettierrc
+            **/.htaccess
