@@ -34,6 +34,11 @@ jobs:
         with:
           name: build
           path: build/  
-      - name: run ls
-        run: ls    
-      
+      - name: run cd build
+        run: cd build   
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ftp.codinghood.in	
+          username: u589244378.aiwctest
+          password: Sub@2019
