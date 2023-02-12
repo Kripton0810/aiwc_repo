@@ -27,10 +27,13 @@ jobs:
           name: build
           path: build/
       
-  deploy:
+  deployment:
     name: Deploy 🛫
     needs: build
     runs-on: ubuntu-latest
+    environment: 
+      name: aiwc-production
+      url: https://aiwctest.codinghood.in/
     steps:
       - name: Checkout repo
         uses: actions/checkout@main
