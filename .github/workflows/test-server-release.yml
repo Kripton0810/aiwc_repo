@@ -19,7 +19,7 @@ jobs:
       - name: Archive staging artifact
         uses: actions/upload-artifact@main
         with:
-          name: dist
+          name: build
           path: build/
       
   deploy:
@@ -32,5 +32,11 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@main
         with:
-          name: dist
-          path: build/
+          name: build
+          path: build/      
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_PASSWORD }}
+          password: ${{ secrets.FTP_USERNAME }}
