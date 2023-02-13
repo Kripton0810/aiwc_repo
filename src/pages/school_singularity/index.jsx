@@ -11,27 +11,29 @@ SwiperCore.use([EffectCoverflow, Pagination])
 function SchoolSingularity() {
   return (
     <div>
-      <section id="threeDCarasoul" className="main-swiper-wrapper">
-        <Swiper
-          effect={"coverflow"}
-          grabCursor="true"
-          centeredSlides="true"
-          slidesPerView="auto"
-          coverflowEffect={{
-            stretch: 0,
-            depth: 100,
-            modifier: 6,
-            slideShadows: true,
-          }}
-        >
-          {data.map((item, key) => (
-            <SwiperSlide key={key}>
-              <img src={item.imageURL} alt={item.title} />
-              <h5>{item.title}</h5>
-              <p>{item.description}</p>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      <section id="threeDCarasoul" className="main-swiper-wrapper p-0">
+        <div className="backdrop-blur-md w-full h-full">
+          <Swiper
+            effect={"coverflow"}
+            grabCursor="true"
+            centeredSlides="true"
+            slidesPerView="auto"
+            coverflowEffect={{
+              stretch: 0,
+              depth: 100,
+              modifier: 6,
+              slideShadows: true,
+            }}
+          >
+            {data.map((item, key) => (
+              <SwiperSlide key={key}>
+                <img src={item.imageURL} alt={item.title} />
+                <h5>{item.title}</h5>
+                <p>{item.description}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
         {/* <div className="quote-parent">
           <div className="quote n-box1 flex-with-center">
             <h1>Quote?!</h1>
