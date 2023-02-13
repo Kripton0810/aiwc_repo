@@ -8,7 +8,6 @@ import LoginPage from "./pages/auth/login"
 import RegisterPage from "./pages/auth/register"
 import Home from "./pages/home"
 import SchoolSingularity from "./pages/school_singularity"
-
 const root = ReactDOM.createRoot(document.getElementById("root"))
 const route = createBrowserRouter([
   {

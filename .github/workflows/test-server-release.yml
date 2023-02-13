@@ -1,0 +1,66 @@
+name: AIWC Test server release
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  build:
+    name: Build 🛠️
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Install Dependencies
+        run: npm install
+      - name: 'Create env file'
+        run:  |
+          echo "${{ secrets.ENV_FILE }}" > .env
+      - name: check env file
+        run: cat .env
+      - name: Making Build of Project
+        run: npm run build
+      - name: Archive staging artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: build
+          path: build/
+      
+  deployment:
+    name: Deploy 🛫
+    needs: build
+    runs-on: ubuntu-latest
+    environment: 
+      name: aiwc-production
+      url: https://aiwctest.codinghood.in/
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@main
+      - name: Download artifact
+        uses: actions/download-artifact@main
+        with:
+          name: build
+          path: build/  
+      - name: run cd build
+        run: cd build
+      - name: check build list
+        run: ls   
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./build/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/public/**
+            **/package*
+            **/README.md
+            **/tailwind.config.js
+            **/netlify.toml
+            **/src/**
+            **/.prettierrc
+            **/.htaccess

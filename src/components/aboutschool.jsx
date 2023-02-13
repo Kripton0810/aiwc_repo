@@ -5,8 +5,8 @@ export default function AboutSchool() {
   return (
     <div className="max-w-lg">
       <Card
-        horizontal={true}
-        imgSrc="http://aiwcaoe.edu.in/images/index/school.jpg"
+        horizontal="true"
+        imgSrc={process.env.REACT_APP_BASE_IMAGE_URL + "mainbuilding.jpg"}
       >
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           About School
