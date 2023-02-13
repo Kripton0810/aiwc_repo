@@ -6,7 +6,6 @@
     background: url('https://codinghood.in/images/aiwc-images/mainbuilding.jpg');
     background-position: center;
     background-size: cover;
-    padding-top: 3rem;
   }
   
   .swiper-container {
@@ -20,7 +19,7 @@
     text-align: center;
     padding: 0.5rem 1rem;
     background: rgb(240, 240, 240);
-    width: 50rem;
+    width: 40rem;
   }
   
   .swiper-slide img {
