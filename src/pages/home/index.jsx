@@ -12,7 +12,7 @@ function Home() {
         <Carosuel />
         <NoticeBoard />
       </div>
-      <div className="flex justify-evenly items-center mt-5 flex-wrap">
+      <div className="flex justify-evenly items-center mt-5 flex-wrap gap-6">
         <AboutSchool />
         <PrincipalMessage />
         <MissionVision />
