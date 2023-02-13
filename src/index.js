@@ -8,6 +8,7 @@ import LoginPage from "./pages/auth/login"
 import RegisterPage from "./pages/auth/register"
 import Home from "./pages/home"
 import SchoolSingularity from "./pages/school_singularity"
+import Achivers from "./pages/achivers"
 const root = ReactDOM.createRoot(document.getElementById("root"))
 const route = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const route = createBrowserRouter([
       {
         path: "/school-features",
         element: <SchoolSingularity />,
+      },
+      {
+        path: "/achievements",
+        element: <Achivers />,
       },
     ],
   },
