@@ -4,7 +4,6 @@ import NoticeBoard from "../../components/noticeBoard"
 import PrincipalMessage from "../../components/principalmessage"
 import AboutSchool from "../../components/aboutschool"
 import MissionVision from "../../components/missionvision"
-import Achivers from "../achivers"
 
 function Home() {
   return (
