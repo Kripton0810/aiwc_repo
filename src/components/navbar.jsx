@@ -1,17 +1,14 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { Navbar } from "flowbite-react"
+import Logo from "../images/main_logo.png"
 function NavBar() {
   return (
     <Navbar fluid={true} rounded={true}>
       <Navbar.Brand to="/navbars">
-        <img
-          src="https://flowbite.com/docs/images/logo.svg"
-          className="mr-3 h-6 sm:h-9"
-          alt="Flowbite Logo"
-        />
+        <img src={Logo} className="mr-3 h-6 sm:h-9" alt="Flowbite Logo" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          Flowbite
+          AIWC Academy Of Excellence
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />

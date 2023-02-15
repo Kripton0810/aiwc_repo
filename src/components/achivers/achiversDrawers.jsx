@@ -10,16 +10,6 @@ export default function AchiversDrawers() {
   )
   const dispatch = useDispatch()
 
-  // const toggleDrawer = (open) => (event) => {
-  //   if (
-  //     event.type === "keydown" &&
-  //     (event.key === "Tab" || event.key === "Shift")
-  //   ) {
-  //     return
-  //   }
-  //   // dispatch(openDrawer())
-  // }
-
   const list = () => (
     <Box
       sx={{ width: "90vw" }}
