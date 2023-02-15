@@ -8,6 +8,9 @@ export default function AchiversDrawers() {
   const state = useSelector(
     (state) => state.achivementDrawerStateReducer.isOpen
   )
+  const payload = useSelector(
+    (state) => state.achivementDrawerStateReducer.payload
+  )
   const dispatch = useDispatch()
 
   const list = () => (
@@ -16,7 +19,9 @@ export default function AchiversDrawers() {
       role="presentation"
       onClick={() => dispatch(toggleDrawer())}
       onKeyDown={() => dispatch(toggleDrawer())}
-    ></Box>
+    >
+      {JSON.stringify(payload)}
+    </Box>
   )
 
   return (

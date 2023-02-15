@@ -6,9 +6,8 @@ import avatarData from "./avatardata.js"
 import { formatDate } from "../../helper/dateConverter"
 import { useOutletContext } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { toggleDrawer } from "../../reducers/achivementDrawerReducres"
+import { toggleAddData } from "../../reducers/achivementDrawerReducres"
 import AchiversDrawers from "../../components/achivers/achiversDrawers"
-
 function AchiversMaker() {
   const dispatch = useDispatch()
   const setShowProgress = useOutletContext()
@@ -30,7 +29,10 @@ function AchiversMaker() {
             <Timeline.Body>
               <AvatarGroup avatarData={info} />
               {info.batchDiscription}
-              <Button color="gray" onClick={() => dispatch(toggleDrawer())}>
+              <Button
+                color="gray"
+                onClick={() => dispatch(toggleAddData([info]))}
+              >
                 View More
                 <ArrowRight className="ml-2 h-3 w-3" />
               </Button>
