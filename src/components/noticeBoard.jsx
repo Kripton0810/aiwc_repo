@@ -61,12 +61,11 @@ function NewsList() {
 
 function NoticeBoard() {
   let hold = false
+
   const handelMouseOver = () => {
-    console.log("Hello in")
     hold = true
   }
   const handelMouseLeave = () => {
-    console.log("Hello Leave")
     hold = false
   }
   useEffect(() => {

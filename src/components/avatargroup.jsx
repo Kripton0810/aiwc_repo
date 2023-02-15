@@ -3,7 +3,7 @@ import { Avatar } from "flowbite-react"
 
 function AvatarGroupMaker(picsData) {
   return picsData.pics.map((item, index) => (
-    <Avatar img={item} rounded={true} stacked={true} />
+    <Avatar img={item} rounded={true} stacked={true} key={`${index}`} />
   ))
 }
 export default function AvatarGroup({ avatarData }) {
