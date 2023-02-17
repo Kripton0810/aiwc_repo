@@ -31,7 +31,7 @@ function AchiversMaker() {
               {info.batchDiscription}
               <Button
                 color="gray"
-                onClick={() => dispatch(toggleAddData([info]))}
+                onClick={() => dispatch(toggleAddData(info))}
               >
                 View More
                 <ArrowRight className="ml-2 h-3 w-3" />

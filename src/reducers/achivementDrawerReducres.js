@@ -4,7 +4,7 @@ const achivementDrawerReducer = createSlice({
   name: "achivementDrawerStateReducer",
   initialState: {
     isOpen: false,
-    payload: [],
+    payload: null,
   },
   reducers: {
     toggleDrawer: (state) => {

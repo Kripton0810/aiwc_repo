@@ -6,16 +6,16 @@ export default function AchiversProfileCard(data) {
     <>
       <div class="card">
         <div class="imgBx">
-          <img src={data.data.imageURL} />
+          <img src={data.data.imageURL} alt="hello" />
         </div>
         <div class="content">
           <div class="details">
             <h2>
-              {data.data.nameOfStudent}
+              {data.data.name}
               <br />
-              <span>Bhai IITn hai aapna</span>
+              <span>{data.data.description}</span>
             </h2>
-            <div class="data">
+            {/* <div class="data">
               <h3>
                 342
                 <br />
@@ -31,11 +31,11 @@ export default function AchiversProfileCard(data) {
                 <br />
                 <span>Following</span>
               </h3>
-            </div>
-            <div class="actionBtn">
+            </div> */}
+            {/* <div class="actionBtn">
               <button>Follow</button>
               <button>Message</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
