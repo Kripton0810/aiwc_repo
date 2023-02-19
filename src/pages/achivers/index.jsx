@@ -48,6 +48,7 @@ export default function Achivers() {
   return (
     <div className="flex justify-center">
       <Timeline>
+        
         <AchiversMaker />
       </Timeline>
       <AchiversDrawers />
