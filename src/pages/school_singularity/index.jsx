@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper.min.css"
 import "swiper/components/effect-coverflow/effect-coverflow.min.css"
@@ -6,11 +6,18 @@ import "swiper/components/pagination/pagination.min.css"
 import { data } from "./data"
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper/core"
 import "./index.css"
+import { useOutletContext } from "react-router-dom"
 
 SwiperCore.use([EffectCoverflow, Pagination])
 function SchoolSingularity() {
+  const setShowProgress = useOutletContext()
+  useEffect(() => {
+    return () => {
+      setShowProgress(true)
+    }
+  })
   return (
-    <div>
+    <div onLoad={() => setShowProgress(false)}>
       <section id="threeDCarasoul" className="main-swiper-wrapper p-0">
         <div className="backdrop-blur-md w-full h-full">
           <Swiper
