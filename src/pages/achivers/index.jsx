@@ -16,6 +16,9 @@ function AchiversMaker() {
       setShowProgress(true)
     }
   })
+  useEffect(() => {
+    document.title = "AIWC Academy of Excellence|Achivers Information"
+  }, [])
   return avatarData.map((item, index) => (
     <div onLoad={() => setShowProgress(false)} key={`${index}`}>
       {item.data.map((info, ind) => (
@@ -48,7 +51,6 @@ export default function Achivers() {
   return (
     <div className="flex justify-center">
       <Timeline>
-        
         <AchiversMaker />
       </Timeline>
       <AchiversDrawers />
