@@ -22,6 +22,9 @@ function NavBar() {
         <Link to="/achievements" className="hover:text-blue-500">
           Achievements
         </Link>
+        <Link to="/achievements" className="hover:text-blue-500">
+          Achievements Temp
+        </Link>
       </Navbar.Collapse>
     </Navbar>
   )
